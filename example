@@ -1,0 +1,38 @@
+loggerapp://import/add?package={
+    "entries": [
+        {
+            "entryType": "Flight",
+            "departureDate": "2024-01-01",
+            "departureTime": "0200",
+            "takeOffTime": "08:00",
+            "landingTime": "10:00",
+            "arrivalTime": "1200",
+            "departureAirport": "SYD",
+            "arrivalAirport": "LAX",
+            "numberOfDayLandings": 1,
+            "numberOfNightLandings": 0,
+            "aircraftType": "A320",
+            "aircraftRegistration": "N123AB",
+            "picName": "John Doe",
+            "sicName": "Jane Doe",
+            "remark": "Smooth flight",
+            "pilotFlying": true,
+            "picTime": "2:00",
+            "ifrTime": "02:00",
+            "nightTime": "02:00",
+            "instructorTime": "02:10",
+            "dualTime": "01:10",
+            "sicTime": "01:00",
+            "approachType": "ILS CAT I",
+            "flightRules": "IFR",
+            "crossCountryTime": "02:00",
+            "numberOfDayTakeOffs": 1,
+            "numberOfNightTakeOffs": 0
+        }
+    ],
+    "metadata": {
+        "appName": "Your Third Party App",
+        "appVersion": "1.0.0",
+        "isUTC": false
+    }
+}
