@@ -3,13 +3,13 @@
 
 ## **Overview**
 
-The Logger Deep Link API enables external applications to import flight data into Logger using deep links formatted with URL schemes and JSON payloads. This API is designed for seamless integration, enabling the addition of comprehensive flight details with minimal user interaction. This document outlines the structure, requirements, and usage of these deep links.
+The Logger Deep Link API enables third-party applications to import flight data into Logger using deep links formatted with URL schemes and JSON payloads. This API is designed for seamless integration, enabling the addition of comprehensive flight details with minimal user interaction. This document outlines the structure, requirements, and usage of these deep links.
 
 for support contact support@getlogger.com
 
 ## **Deep Link Format**
 
-The deep link for importing flight data into LoggerApp follows this format:
+The deep link for importing flight data into Logger follows this format:
 
 `loggerapp://import/add?package=<JSON_DATA>`
 
