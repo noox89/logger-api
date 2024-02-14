@@ -1,4 +1,4 @@
-# logger-api
+# Logger API
 *API version 1.0*
 
 ## **Overview**
