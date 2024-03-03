@@ -78,12 +78,12 @@ As a minimum `**entryType`** and `**departureDate**` need to be provided. Other 
 ### **`entryType`**  <String>
 
 - “Flight”
-- “Dead Head” (currently not supported)
-- “Simulator” (currently not supported)
-- “Airport Reserve” (currently not supported)
-- “Home Reserve” (currently not supported)
-- “Home Standby” (currently not supported)
-- “Airport Standby” (currently not supported)
+- “Dead Head”
+- “Simulator” 
+- “Airport Reserve” 
+- “Home Reserve” 
+- “Home Standby” 
+- “Airport Standby”
 
 ### **`departureDate` <String>**
 
@@ -159,6 +159,42 @@ As a minimum `**entryType`** and `**departureDate**` need to be provided. Other 
 ### `sicName` <String>
 
 - The name of the Second in Command (SIC).
+
+### `flightEngineerName` <String>
+
+- The name of the Flight Engineer.
+
+### `pilotExaminerName` <String>
+
+- The name of the Examiner.
+
+### `pilotInstructorName` <String>
+
+- The name of the Instructor.
+
+### `pilotObserverName` <String>
+
+- The name of the 1st Observer.
+
+### `pilotObserver2Name` <String>
+
+- The name of the 2nd Observer.
+
+### `pilotReliefName` <String>
+
+- The name of the 1st Relief Pilot.
+
+### `pilotRelief2Name` <String>
+
+- The name of the 1st Relief Pilot.
+
+### `pilotStudentName` <String>
+
+- The name of the Student Pilot.
+
+### `pilotSOName` <String>
+
+- The name of the Second Officer.
 
 ### `pilotFlying` <Bool>
 
