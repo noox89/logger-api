@@ -13,7 +13,7 @@ The deep link for importing flight data into Logger follows this format:
 
 `loggerapp://import/add?package=<JSON_DATA>`
 
-Here, **`<JSON_DATA>`** represents the URL-encoded JSON string containing the flight data entries and metadata.
+Here, **`<JSON_DATA>`** represents the URL-encoded JSON string containing the flight data entries and metadata. Note: The same deep link structure is also used when updating previously imported entries (more info in importId section).
 
 ## **JSON Data Structure**
 
@@ -58,22 +58,30 @@ Each entry in the **`entries`** array should follow this structure:
 
 ```jsx
 "entries":[{
+  "importId": "String",
   "entryType": "String",
   "departureDate": "YYYY-MM-DD"
 // Other properties as decribed in documentation below
 },
 {
+  "importId": "String",
   "entryType": "String",
   "departureDate": "YYYY-MM-DD"
 // Other properties as decribed in documentation below
 }]
 ```
 
-As a minimum `**entryType`** and `**departureDate**` need to be provided. Other properties are optional.
+As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be provided. Other properties are optional.
 
 ## **Core Flight Information**
 
 - These properties with valid values need to be provided in order to parse the JSON
+
+### **`importId` <String>** 
+
+- Provide **unique** non-empty string to each entry.
+- In order to update previously imported entry, import new entry with matching `importId`
+
 
 ### **`entryType`**  <String>
 
@@ -398,14 +406,17 @@ Example of multiple flights with minimum required Data with times and dates in l
 loggerapp://import/add?package={
     "entries": [
         {
+            "importId": "86bff049-d825-4664-9741-5a39475c575a",
             "entryType": "Flight",
             "departureDate": "2024-01-01"
         },
-				{
+	{
+	    "importId": "139e1797-c9a2-4de2-a0da-13b870b567f6",
             "entryType": "Flight",
             "departureDate": "2024-01-02"
         },
         {
+            "importId": "0c6842b1-f4c0-4f58-a25a-69433b44bb8c",
             "entryType": "Flight",
             "departureDate": "2024-01-25"
         }
@@ -418,12 +429,34 @@ loggerapp://import/add?package={
 }
 ```
 
+Example of updating first flight from previous example:
+
+```jsx
+loggerapp://import/add?package={
+    "entries": [
+        {
+            //Same importId is used to invoke the update instead of new import
+            "importId": "86bff049-d825-4664-9741-5a39475c575a",
+            "entryType": "Simulator",
+            "departureDate": "2024-01-01"
+        }
+    ],
+    "metadata": {
+        "appName": "Your Third Party App",
+        "appVersion": "1.0.0",
+        "isUTC": false
+    }
+}
+```
+
+
 Example of single flight with optional data and times and dates in UTC
 
 ```jsx
 loggerapp://import/add?package={
     "entries": [
         {
+            "importId": "86bff049-d825-4664-9741-5a39475c575a",
             "entryType": "Flight",
             "departureDate": "2024-01-01",
             "departureTime": "0200",
