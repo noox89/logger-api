@@ -1,5 +1,5 @@
 # Logger API
-*API version 1.0*
+*API version 1.1*
 
 ## **Overview**
 
