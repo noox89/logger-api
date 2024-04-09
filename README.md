@@ -1,5 +1,5 @@
 # Logger API
-*API version 1.1*
+*API version 1.2*
 
 ## **Overview**
 
@@ -87,6 +87,7 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - “Flight”
 - “Dead Head”
+- "Other Duty"
 - “Simulator” 
 - “Airport Reserve” 
 - “Home Reserve” 
@@ -200,6 +201,10 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - The name of the Student Pilot.
 
+### `pilotStudent2Name` <String>
+
+- The name of the 2nd Student Pilot.
+
 ### `pilotSOName` <String>
 
 - The name of the Second Officer.
@@ -226,7 +231,11 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 ### `ifrTime` <String>
 
-- The time flown under Instrument Flight Rules
+- The time flown under Instrument Flight Rules (IFR)
+
+### `actualInstrumentTime` <String>
+
+- The time flown in Instrument Flight Conditions (IMC)
 
 ### `crossCountryTime` <String>
 
@@ -263,6 +272,22 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 ### `simTime` <String>
 
 - The time spent in a simulator
+
+### `simInstructorTime` <String>
+
+- The time spent as simulator instructor (TRI/SFI)
+
+### `simExaminerTime` <String>
+
+- The time spent as simulator examiner / checker (TRE/SFE)
+
+### `lineInstructorTime` <String>
+
+- The time spent as line training instructor (LTI/LTC)
+
+### `lineCheckerTime` <String>
+
+- The time spent as line check captain / check airman (LCC)
 
 ### `pcatdTime` <String>
 
