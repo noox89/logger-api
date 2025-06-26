@@ -152,6 +152,10 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 ## **Aircraft and Crew Details**
 
+### `flightNumber` <String>
+
+- Flight Number
+
 ### `aircraftType` <String>
 
 - The type of aircraft used
