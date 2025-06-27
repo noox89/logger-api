@@ -169,49 +169,97 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - The name of the Pilot in Command (PIC).
 
+### `picPilotId` <String>
+
+- The ID of the Pilot in Command (PIC).
+
 ### `sicName` <String>
 
 - The name of the Second in Command (SIC).
+
+### `sicPilotId` <String>
+
+- The ID of the Second in Command (SIC).
 
 ### `flightEngineerName` <String>
 
 - The name of the Flight Engineer.
 
+### `flightEngineerId` <String>
+
+- The ID of the Flight Engineer.
+
 ### `pilotExaminerName` <String>
 
 - The name of the Examiner.
+
+### `pilotExaminerId` <String>
+
+- The ID of the Examiner.
 
 ### `pilotInstructorName` <String>
 
 - The name of the Instructor.
 
+### `pilotInstructorId` <String>
+
+- The ID of the Instructor.
+
 ### `pilotObserverName` <String>
 
 - The name of the 1st Observer.
+
+### `pilotObserverId` <String>
+
+- The ID of the 1st Observer.
 
 ### `pilotObserver2Name` <String>
 
 - The name of the 2nd Observer.
 
+### `pilotObserver2Id` <String>
+
+- The ID of the 2nd Observer.
+
 ### `pilotReliefName` <String>
 
 - The name of the 1st Relief Pilot.
+
+### `pilotReliefId` <String>
+
+- The ID of the 1st Relief Pilot.
 
 ### `pilotRelief2Name` <String>
 
 - The name of the 1st Relief Pilot.
 
+### `pilotRelief2Id` <String>
+
+- The ID of the 1st Relief Pilot.
+
 ### `pilotStudentName` <String>
 
 - The name of the Student Pilot.
+
+### `pilotStudentId` <String>
+
+- The ID of the Student Pilot.
 
 ### `pilotStudent2Name` <String>
 
 - The name of the 2nd Student Pilot.
 
+### `pilotStudent2Id` <String>
+
+- The ID of the 2nd Student Pilot.
+
 ### `pilotSOName` <String>
 
 - The name of the Second Officer.
+
+### `pilotSOId` <String>
+
+- The ID of the Second Officer.
 
 ### `pilotFlying` <Bool>
 
