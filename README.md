@@ -1,5 +1,5 @@
 # Logger API
-*API version 1.2*
+*API version 1.3*
 
 ## **Overview**
 
@@ -149,6 +149,12 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - IATA three-letter code for arrival airport, or
 - ICAO four-letter code for the arrival airport (e.g. JFK or KJFK)
+
+### `route` <String>
+
+- List of intermediate route airports (ICAO) codes (excluding departure and destination)
+- If more than one intermediate airport is used, separate the codes by "-"
+- Example: "LKPR" or "LKPR-ENTO"
 
 ## **Aircraft and Crew Details**
 
@@ -409,6 +415,10 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - The amount of fuel burned during the flight, in kgs, litres or gallons.
 
+### `flightLevel` <Int>
+
+- Cruise flight level in feet (e.g. 10,000ft = "100").
+
 ### `hobbsIn` <Double>
 
 - The Hobbs meter reading at the start of the flight.
@@ -427,7 +437,7 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 ## Flight Rules
 
-### `numberOfApproaches` <Int>
+### ~~`numberOfApproaches` <Int>~~ Deprecated
 
 - The number of approaches performed during the flight.
 
@@ -435,7 +445,15 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
 
 - The number of holding patterns.
 
-### `approachType` <String>
+### ~~`approachType` <String>~~ Deprecated
+
+### `departureRunway` <String>
+- Departure runway "22L"
+
+### `approaches` <String>
+- Array of approaches separated by "|"
+- Each approach has 4 components separated by comma "," in the following order:
+- Number of approaches, Approach Type, Approach Place (ICAO Code), Landing Runway
 
 - The type of approach performed
 - Allowed values:
@@ -454,6 +472,8 @@ As a minimum **`importId`**, **`entryType`** and **`departureDate`** need to be 
     - "Visual"
     - "Circling"
     - "Monitored"
+ 
+- Example: "10,VOR,LKPR,24|1,ILS CAT I,EGSS,22"
 
 ### `flightRules` <String>
 
