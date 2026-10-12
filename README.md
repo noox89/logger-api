@@ -1,5 +1,5 @@
 # Logger API
-*API version 1.3*
+*API version 1.4*
 
 ## **Overview**
 
@@ -27,7 +27,8 @@ The JSON data sent through the deep link should be structured as follows:
   "metadata": {
     "appName": "String",
     "appVersion": "String",
-    "isUTC": Boolean
+    "isUTC": Boolean,
+    "overrideLoggerAutofill" : Bool
   }
 }
 ```
@@ -41,6 +42,7 @@ The **`metadata`** object contains:
 - **`appName`**: <String> The name of the application sending the data.
 - **`appVersion`**: <String> The version of the application sending the data.
 - **`isUTC`**: <Bool> A boolean indicating whether the **time values** and **dates** are in UTC.
+-  **`overrideLoggerAutofill`**: <Bool> A boolean indicating whether the importer should fill all data ignoring user's auto-fill setting (e.g. if false and user has auto-fill for DUAL and Cross-Country and import has these times missing, Logger automatically fills them in; if true and these times are empty strings or missing, these times will not be filled in even though the user has the auto-fill ON for these times.)
 
 *Example:*
 
@@ -48,7 +50,8 @@ The **`metadata`** object contains:
 "metadata": {
     "appName": "My App",
     "appVersion": "1.2.1",
-    "isUTC": true
+    "isUTC": true,
+    "overrideLoggerAutofill": true
   }
 ```
 
