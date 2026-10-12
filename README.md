@@ -28,7 +28,7 @@ The JSON data sent through the deep link should be structured as follows:
     "appName": "String",
     "appVersion": "String",
     "isUTC": Boolean,
-    "overrideLoggerAutofill" : Bool
+    "overrideLoggerAutofill" : Boolean
   }
 }
 ```
